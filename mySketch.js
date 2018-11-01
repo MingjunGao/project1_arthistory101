@@ -78,7 +78,7 @@ function draw() {
 		particles_b[i].display(radius);
 		particles_b[i].checkEdge();
 
-		fill(205,250,250,alpha);//white
+		fill(205,250,250,alpha);//white using alpha to change trans
 		particles_c[i].move();
 		particles_c[i].display(radius);
 		particles_c[i].checkEdge();
@@ -101,7 +101,11 @@ function draw() {
    
   }
  
-  
+  if(mouseIsPressed){//blue trans color overlay on top of the painitng if mouse pressed 
+      noStroke();
+      fill(random(0,8),random(100,167),random(200,250),50);
+      ellipse(mouseX,mouseY,200,200);
+    }
   
 
   
@@ -251,5 +255,3 @@ noStroke();
  
   
 }//function drawleadf ends
-
-
